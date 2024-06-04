@@ -27,7 +27,7 @@
 
 @media (max-width: 768px) {
   .wrapper {
-    width: 100%;
+    width: 98%;
     font-size: clamp(2.8rem, 2rem + 5vw, 5.2rem);
   }
 }
