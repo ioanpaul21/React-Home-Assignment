@@ -6,14 +6,15 @@ const getButtonStyles = (theme: Theme, variant?: ButtonVariants) => {
   switch (variant) {
     case "primary":
       return `
-          background: ${theme.colors.primary};
-          color: ${theme.colors.white};
+          background: #a3ff12;
+          color: #222430;
+          font-weight: bold;
         `;
     case "secondary":
       return `
-          background: transparent;
-          color: ${theme.colors.primary};
-          border: 1px solid ${theme.colors.primary};
+          background:#ed2e73;
+          color: ${theme.colors.white};
+          font-weight: bold;
         `;
     default:
       return "";

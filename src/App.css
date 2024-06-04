@@ -1,1 +1,110 @@
 /* Globals */
+.wrapper {
+  display: grid;
+  width: fit-content;
+  place-content: center;
+  min-height: 9vh;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(1.5rem, 1rem + 3vw, 3.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #a3ff12;
+}
+
+.wrapper > div {
+  grid-area: 1/1/-1/-1;
+}
+.top {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+}
+.bottom {
+  clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+  color: #ed2e73;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transform: translateX(-0.02em);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    font-size: clamp(2.8rem, 2rem + 5vw, 5.2rem);
+  }
+}
+
+.label-input {
+  color: azure;
+  font-size: medium;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.spinner {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+.bounce1,
+.bounce2 {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: bounce 2s infinite ease-in-out;
+  animation-fill-mode: both;
+}
+
+.bounce1 {
+  background-color: #ed2e73;
+  animation-delay: -1s;
+}
+
+.bounce2 {
+  background-color: #a3ff12;
+  animation-delay: 0s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+.error-message-wrapper {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-message {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.index-users {
+  color: antiquewhite;
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
